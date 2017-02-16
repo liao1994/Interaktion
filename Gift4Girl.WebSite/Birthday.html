@@ -1,9 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gift4Girl</title>
-    <meta name="description" content="DESCRIPTION">
    <link rel="stylesheet" type="text/css" href="./Content/Styles/Custom.css">
+   <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+            rel = "stylesheet">
+   <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+     <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#slider-range" ).slider({
+      range: true,
+      min: 50,
+      max: 5000,
+      values: [ 50, 5000 ],
+      slide: function( event, ui ) {
+        $( "#amount" ).val( ui.values[ 0 ] + "DKK - " + ui.values[ 1 ] +" DKK" );
+      }
+    });
+    $( "#amount" ).val( $( "#slider-range" ).slider( "values", 0 ) +
+      "DKK - " + $( "#slider-range" ).slider( "values", 1 ) + "DKK");
+  } );
+  </script>
   </head>
   <body>
     <div class="row">
@@ -20,17 +39,41 @@
           </h1>
         </div>
     </div>
-    <div class="row">
       <div class="col-3">
-        <table>
+        <table class="filter-table">
           <tr>
-            <td> Price Range</td>
+            <td><label for="amount">Price range:</label><input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;"></td>
+          </tr>
+          <tr>
+            <td>
+<div id="slider-range"></div>
+            </td>
           </tr>
         </table>
       </div>
       <div class="col-6">
-
+          <div class="row">
+            <textarea name="name" rows="8" cols="80" background="red">
+              gave 1
+            </textarea>
+          </div>
+          <div class="row">
+            <textarea name="name" rows="8" cols="80" background="red">
+              gave 2
+            </textarea>
+          </div>
+          <div class="row">
+            <textarea name="name" rows="8" cols="80" background="red">
+              gave 3
+            </textarea>
+          </div>
       </div>
     </div>
   </body>
 </html>
+<script type="text/javascript">
+  function rangeEvent(val){
+          document.getElementById('priceRange').value=val;
+        }
+  }
+</script>

@@ -85,7 +85,12 @@ h1 {
 	font-size: 18px;
 	line-height: 20px;
 }
-
+.filter-table {
+   filter:alpha(opacity=60);
+  background: rgba(255,255,255,0.5);
+  margin: 1em;
+  padding: 5px;
+}
 th, td {
-    border-bottom: 1px solid #ddd;
+    border-bottom: 10px solid #ddd;
 }
