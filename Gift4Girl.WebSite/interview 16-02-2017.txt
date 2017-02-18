@@ -1,0 +1,18 @@
+Observation
+	Navigerede nemt rundt
+	Ikke de store spørgsmål, kun hvad de enkelte kategorier indeholdte
+	baggrunden er lidt dishrende 
+
+Open interview omkring design
+	- Hvordan finder du brugervenligheden i designet? (første øjekast)
+		hvis der er ikke mere på det senere
+	- Er applikationen nem at navigere rundt i?
+		ja, kan lide den store knap hvis man forestiller sig at det er en touchskærm i storcenter nord
+	- Kan du nemt finde den ønskede gave? (Tager det for lang tid?)
+		? kunne godt have det mere katagoriseret indenfor fødselsdag, evt. have. rejse. eller typen af person
+	- Er gitter eller liste løsning den bedste?
+		? Umiddelbart er liste løsningen den rigtige. Det er nemmere at scrolle ned. og gitte vil gøre tingene rodet
+	- Andre kommentar
+		savner et hurtigt sådan gør du guide for nye mennesker
+		vil gerne have et beskrivelsen af varen når man klikker på det
+		se evt. pris på varen
