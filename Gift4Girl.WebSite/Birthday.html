@@ -16,11 +16,11 @@
       max: 5000,
       values: [ 50, 5000 ],
       slide: function( event, ui ) {
-        $( "#amount" ).val( ui.values[ 0 ] + "DKK - " + ui.values[ 1 ] +" DKK" );
+        $( "#amount" ).val( ui.values[ 0 ] + " DKK - " + ui.values[ 1 ] +" DKK" );
       }
     });
     $( "#amount" ).val( $( "#slider-range" ).slider( "values", 0 ) +
-      "DKK - " + $( "#slider-range" ).slider( "values", 1 ) + "DKK");
+      " DKK - " + $( "#slider-range" ).slider( "values", 1 ) + " DKK");
   } );
   </script>
   </head>
@@ -55,19 +55,19 @@
       <div class="col-6">
         <div class="gift-result">
 
-          <div class="row">
+          <div class="row bottom-line">
 
-            <div class="col-11" contentEditable="true" name="name" bgcolor="white" style="border: 1px solid #ccc";>
+            <div class="col-10">
               gave 1
               <img src="content/Images/kageruller_2.jpg">
             </div>
-
-              <button align=right type="button">  <a href="Route.html">more info</a></button>
-
-
+            <div class="more-info">
+                <br><br><br><br><br>
+                <button  class="catagory-btn more-info" type="button">  <a href="Route.html">more info</a></button>
+            </div>
           </div>
           <div class="row">
-            <div contentEditable="true" name="name" rows="8" cols="80" bgcolor="white" style="border: 1px solid #ccc";>
+            <div>
               gave 1
               <img src="content/Images/opvaskeborsteplast.jpg">
             </div>

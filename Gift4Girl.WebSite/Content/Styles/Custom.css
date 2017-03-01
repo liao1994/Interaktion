@@ -9,8 +9,16 @@ body{
 }
 div.gift-result {
   height: 600px;
-  min-width: 80em;
+  min-width: 75em;
   overflow-y: auto;
+  background-color:rgba(100,100,100,0.5);
+  -webkit-box-shadow: 25px 25px 70px 0px rgba(0,0,0,0.6);
+  -moz-box-shadow: 25px 25px 70px 0px rgba(0,0,0,0.6);
+  box-shadow: 25px 25px 70px 0px rgba(0,0,0,0.6);
+}
+
+.bottom-line {
+  border-bottom: thick dotted #000000;
 }
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
@@ -60,12 +68,11 @@ button.stealth {
 }
 
 h1 {
-	margin: 1em 0 1em;
+	margin: 40px 0 1em;
 	padding: 0 0 10px 0;
 	color: #6B5344;
 	font-weight: normal;
 	position: relative;
-
   text-shadow: -2px 0 rgb(200, 200, 200), 0 2px rgb(200, 200, 200), 2px 0 rgb(200, 200, 200), 0 -2px rgb(200, 200, 200);
 
 	font-size: 72px;
@@ -161,4 +168,6 @@ th, td {
 	top:1px;
 }
 
+.more-info{
+  vertical-align: middle;
 }
