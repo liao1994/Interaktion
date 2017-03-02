@@ -7,16 +7,25 @@ body{
   background-image: opacity(0.5),filter: ,url("../Images/bkgndpic.jpg");
     background-blend-mode:screen;*/
 }
+.gift-text{
+  margin-left: 50px;
+}
 div.gift-result {
   height: 600px;
   min-width: 75em;
   overflow-y: auto;
   background-color:rgba(100,100,100,0.5);
-  -webkit-box-shadow: 25px 25px 70px 0px rgba(0,0,0,0.6);
-  -moz-box-shadow: 25px 25px 70px 0px rgba(0,0,0,0.6);
-  box-shadow: 25px 25px 70px 0px rgba(0,0,0,0.6);
+  -webkit-box-shadow: 25px 25px 70px 0px rgba(0,0,0,0.6), inset -5px -3px 300px 0px rgba(0,0,0,0.36);
+  -moz-box-shadow: 25px 25px 70px 0px rgba(0,0,0,0.6), inset -5px -3px 300px 0px rgba(0,0,0,0.36);
+  box-shadow: 25px 25px 70px 0px rgba(0,0,0,0.6), inset -5px -3px 300px 0px rgba(0,0,0,0.36);
+  border-radius: 10px;
 }
 
+.gift-img{
+  width: 300px;
+  height: 300px;
+  margin: 0px 50px;
+}
 .bottom-line {
   border-bottom: thick dotted #000000;
 }
@@ -73,7 +82,7 @@ h1 {
 	color: #6B5344;
 	font-weight: normal;
 	position: relative;
-  text-shadow: -2px 0 rgb(200, 200, 200), 0 2px rgb(200, 200, 200), 2px 0 rgb(200, 200, 200), 0 -2px rgb(200, 200, 200);
+  text-shadow: -5px 0 rgb(200, 200, 200), 0 2px rgb(200, 200, 200), 2px 0 rgb(200, 200, 200), 0 -2px rgb(200, 200, 200);
 
 	font-size: 72px;
 	line-height: 80px;
@@ -170,4 +179,37 @@ th, td {
 
 .more-info{
   vertical-align: middle;
+}
+::-webkit-scrollbar {
+  width: 21px;
+  height: 21px;
+}
+::-webkit-scrollbar-button {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #e1e1e1;
+  border: 0px solid #ffffff;
+  border-radius: 55px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #000000;
+}
+::-webkit-scrollbar-track {
+  background: #666666;
+  border: 100px none #ffffff;
+  border-radius: 90px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #666666;
+}
+::-webkit-scrollbar-track:active {
+  background: #333333;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
 }
