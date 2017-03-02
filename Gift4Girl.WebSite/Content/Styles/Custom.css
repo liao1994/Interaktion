@@ -7,6 +7,18 @@ body{
   background-image: opacity(0.5),filter: ,url("../Images/bkgndpic.jpg");
     background-blend-mode:screen;*/
 }
+a {text-decoration: none}
+.show-me-the-way{
+  font-size: 18px;
+  font-weight: bold;
+}
+.catagory-btn-text{
+  font-size: 18px;
+  font-weight: bold;
+}
+.backarrow{
+  width : 150px;
+}
  .custom-font{
    font-weight: bold;
    font-size: 18px;
@@ -58,7 +70,7 @@ div.gift-result {
 body::after {
   content: "";
   background: url("../Images/bkgndpic.jpg");
-  opacity: 0.5;
+  opacity: 0.3;
   top: 0;
   left: 0;
   bottom: 0;
