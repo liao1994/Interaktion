@@ -7,6 +7,7 @@ body{
   background-image: opacity(0.5),filter: ,url("../Images/bkgndpic.jpg");
     background-blend-mode:screen;*/
 }
+
 a {text-decoration: none}
 .show-me-the-way{
   font-size: 18px;
@@ -31,8 +32,10 @@ a {text-decoration: none}
   margin-left: 50px;
 }
 div.gift-result {
-  height: 600px;
-  min-width: 75em;
+  min-height: 45%;
+  max-height: 38em;
+  min-width: 75%;
+  max-width: 100%;
   overflow-y: auto;
   background-color:rgba(100,100,100,0.5);
   -webkit-box-shadow: 25px 25px 70px 0px rgba(0,0,0,0.6), inset -5px -3px 300px 0px rgba(0,0,0,0.36);
@@ -63,8 +66,8 @@ div.gift-result {
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 [class*="col-"] {
-    float: left;
-    padding: 15px;
+    float:left;
+    padding: 0.7em;
     border: 1px hidden;
 }
 body::after {
@@ -149,19 +152,27 @@ h1 {
   border:0;
   color:rgb(0,0,0);
   font-weight:bold;
+  width: 65%;
+  min-width: 128px;
+
+
+
 }
 .filter-table {
-   filter:alpha(opacity=60);
+  filter:alpha(opacity=60);
   background: rgba(172,177,179,0.5);
   margin: 1em;
-  padding: 5px;
-  position: fixed;
-  margin: 5px;
+  padding: 0.1em;
+  margin: 0.1em;
   background-color: rgba(92,92,92,0.6)
 }
 th, td {
     padding: 10px;
     border-bottom: 2px solid #ddd;
+}
+
+tr {
+  width: inherit;
 }
 
 .catagory-btn{

@@ -3,11 +3,10 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gift4Girl</title>
-   <link rel="stylesheet" type="text/css" href="./Content/Styles/Custom.css">
    <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
             rel = "stylesheet">
    <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
-     <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+   <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
   <script>
   $( function() {
     $( "#slider-range" ).slider({
@@ -23,13 +22,13 @@
       " DKK - " + $( "#slider-range" ).slider( "values", 1 ) + " DKK");
   } );
   </script>
+  <link rel="stylesheet" type="text/css" href="./Content/Styles/Custom.css">
   </head>
   <body>
     <div class="row">
       <div class="col-4">
             <br>
         <button class="stealth">
-
           <a href="index.html">
             <img src="./Content/Images/Left-Arrow.png" class="backarrow">
           </a>
@@ -42,10 +41,13 @@
         </div>
     </div>
     <div class="row">
+      <div class="col-min"></div>
       <div class="col-2">
-        <table class="filter-table">
+        <table class="filter-table" >
           <tr>
-            <td><label for="amount" style="font-weight:bold;">Pris:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text" id="amount" readonly class="filter-table-text"></td>
+            <td>
+              <label for="amount" style="font-weight:bold;">Pris:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text" id="amount" readonly class="filter-table-text"/>
+              </td>
           </tr>
           <tr>
             <td>
@@ -69,7 +71,7 @@
         </table>
       </div>
       <div class="col-min"></div>
-      <div class="col-6">
+      <div class="col-9">
         <div class="gift-result">
 
           <div class="row bottom-line">
@@ -97,6 +99,7 @@
               </div>
                           </div>
           </div>
+<div class="row">
 
             <div class="col-5">
               <img src="content/Images/HBgift.png" class="gift-img">
@@ -120,6 +123,7 @@
 
               </div>
                           </div>
+                        </div>
           </div>
       </div>
     </div>
