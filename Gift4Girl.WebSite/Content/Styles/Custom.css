@@ -14,11 +14,17 @@ a {text-decoration: none}
   font-weight: bold;
 }
 .catagory-btn-text{
-  font-size: 18px;
+  font-size: 1.5vw;
   font-weight: bold;
 }
+.category-icon{
+  width: 10vw;
+  height: 10vw;
+}
+
 .backarrow{
-  width : 150px;
+  width : 10vw;
+  padding: 0 0 0.1vw 0;
 }
  .custom-font{
    font-weight: bold;
@@ -67,8 +73,8 @@ div.gift-result {
 .col-12 {width: 100%;}
 [class*="col-"] {
     float:left;
-    padding: 0.7em;
-    border: 1px hidden;
+    padding: 1vw;
+    border: 0.1vw hidden;
 }
 body::after {
   content: "";
@@ -101,15 +107,18 @@ button.stealth {
 }
 
 h1 {
-	margin: 40px 0 1em;
-	padding: 0 0 10px 0;
+	padding: 0 0 0.1vw 0;
 	color: #6B5344;
 	font-weight: normal;
 	position: relative;
-  text-shadow: -5px 0 rgb(200, 200, 200), 0 2px rgb(200, 200, 200), 2px 0 rgb(200, 200, 200), 0 -2px rgb(200, 200, 200);
+  text-shadow:
+    -0.1vw 0 rgb(200, 200, 200),
+    0 0.2vw rgb(200, 200, 200),
+    0.2vw 0 rgb(200, 200, 200),
+    0 -0.2vw rgb(200, 200, 200);
 
-	font-size: 72px;
-	line-height: 80px;
+	font-size: 5vw;
+	line-height: 6vw;
 	font-family: 'Carrois Gothic', sans-serif;
 }
 
