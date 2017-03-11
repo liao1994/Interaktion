@@ -13,7 +13,7 @@ function smoothScroll(target) {
     } while (target = target.offsetParent);
 
     scroll = function(c, a, b, i) {
-        i++; if (i > 25) return;
+        i++; if (i > 28) return;
         c.scrollTop = a + (b - a) / 30 * i;
         setTimeout(function(){ scroll(c, a, b, i); }, 20);
     }
