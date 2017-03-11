@@ -19,7 +19,7 @@ margin: 1vw;
 }
  .gift-detailed-result-text {
    font-size: 2vw;
-    color:white;
+    color:black;
  }
 h3{
   font-size: 1vw;
@@ -62,7 +62,9 @@ label.custom-font{
   height: 13vw;
   margin: 0px 1vw;
 }
+.giftselectsorting {
 
+}
 .gift-detailed-result-icon {
   width: 25vw;
   height: 25vw;
@@ -115,7 +117,26 @@ div.gift-result-more-info {
 .col-12 {width: 100%;}
 [class*="col-"] {
     float:left;
-    padding: 1vw;
+    padding: 0.4vw;
+    border: 0.1vw hidden;
+}
+
+.slim-col-min {width:4;}
+.slim-col-1 {width: 8.33%;}
+.slim-col-2 {width: 16.66%;}
+.slim-col-3 {width: 25%;}
+.slim-col-4 {width: 33.33%;}
+.slim-col-5 {width: 41.66%;}
+.slim-col-6 {width: 50%;}
+.slim-col-7 {width: 58.33%;}
+.slim-col-8 {width: 66.66%;}
+.slim-col-9 {width: 75%;}
+.slim-col-10 {width: 83.33%;}
+.slim-col-11 {width: 91.66%;}
+.slim-col-12 {width: 100%;}
+[class*="slim-col-"] {
+    float:left;
+    padding: 0.1vw;
     border: 0.1vw hidden;
 }
 body::after {
@@ -149,7 +170,6 @@ button.stealth {
 }
 
 h1 {
-	padding: 0 0 0.1vw 0;
 	color: #6B5344;
 	font-weight: normal;
 	position: relative;
@@ -160,7 +180,6 @@ h1 {
     0 -0.2vw rgb(200, 200, 200);
 
 	font-size: 4vw;
-	line-height: 5vw;
 	font-family: 'Carrois Gothic', sans-serif;
 }
 
@@ -308,4 +327,42 @@ input[type="checkbox" i] {
 }
 ::-webkit-scrollbar-corner {
   background: transparent;
+}
+
+.select_style {
+    background: #FFF;
+    overflow: hidden;
+    display: inline-block;
+    color: #525252;
+    font-weight: 300;
+    -webkit-border-radius: 5px 4px 4px 5px/5px 5px 4px 4px;
+    -moz-border-radius: 5px 4px 4px 5px/5px 5px 4px 4px;
+    border-radius: 5px 4px 4px 5px/5px 5px 4px 4px;
+    -webkit-box-shadow: 0 0 5px rgba(123, 123, 123, 0.2);
+    -moz-box-shadow: 0 0 5px rgba(123,123,123,.2);
+    box-shadow: 0 0 5px rgba(123, 123, 123, 0.2);
+    border: solid 1px #DADADA;
+    font-family: "helvetica neue",arial;
+    position: relative;
+    cursor: pointer;
+    padding-right:20px;
+}
+.select_style span {
+    position: absolute;
+    right: 0.8vw;
+    width: 2vw;
+    height: 0.2vw;
+    top: 50%;
+    margin-top: -0.2vw;
+}
+.select_style select {
+    -webkit-appearance: none;
+    appearance:none;
+    background:none;
+    background:transparent;
+    border:none;
+    outline:none;
+    cursor:pointer;
+    padding:.5vw 1vw;
+
 }

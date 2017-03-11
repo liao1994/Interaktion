@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gift4Girl</title>
-   <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
-            rel = "stylesheet">
+    <link rel="stylesheet" href="./Content/Styles/jquery-custom.css">
+<!--
+<link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+            rel = "stylesheet">-->
+
    <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
    <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
   <script>
@@ -16,18 +20,105 @@
       values: [ 50, 5000 ],
       slide: function( event, ui ) {
         $( "#amount" ).val( ui.values[ 0 ] + " DKK - " + ui.values[ 1 ] +" DKK" );
-      }
+        var x1 = document.getElementById("gift-1");
+        var x2 = document.getElementById("gift-2");
+        var x3 = document.getElementById("gift-3");
+        var x4 = document.getElementById("gift-4");
+        var x5 = document.getElementById("gift-5");
+        var x6 = document.getElementById("gift-6");
+        var y1 = document.getElementById("parfume-chkbox").checked;
+        var y2 = document.getElementById("cloth-chkbox").checked;
+        var y3 = document.getElementById("stel-chkbox").checked;
+
+      if(ui.values[0] < 300 && ui.values[1] > 300 && y1 == true){
+        x1.hidden = false;
+      }else{
+        x1.hidden = true;
+      };
+      if(ui.values[0] < 999.95  && ui.values[1] > 999.95 && y1 == true){
+        x2.hidden = false;
+      }else{
+        x2.hidden = true;
+      };
+      if(ui.values[0] < 299  && ui.values[1] > 299 && y2 == true){
+        x3.hidden = false;
+      }else{
+        x3.hidden = true;
+      };
+      if(ui.values[0] < 379.95  && ui.values[1] > 379.95 && y2 == true){
+        x4.hidden = false;
+      }else{
+        x4.hidden = true;
+      };
+      if(ui.values[0] < 1599.95  && ui.values[1] > 1599.95 && y3 == true){
+        x5.hidden = false;
+      }else{
+        x5.hidden = true;
+      };
+      if(ui.values[0] < 4998  && ui.values[1] > 4998 && y3 == true){
+        x6.hidden = false;
+      }else{
+        x6.hidden = true;
+      };
+
+    }
     });
     $( "#amount" ).val( $( "#slider-range" ).slider( "values", 0 ) +
       " DKK - " + $( "#slider-range" ).slider( "values", 1 ) + " DKK");
+
+
   } );
+  function filter_result_1(ele) {
+    var x = document.getElementById("gift-3");
+    var x1 = document.getElementById("gift-4");
+
+    if(ele.checked == true){
+      if($( "#slider-range" ).slider( "values", 0 ) < 299 && $( "#slider-range" ).slider( "values", 1 ) > 299)
+        x.hidden = false;
+      if($( "#slider-range" ).slider( "values", 0 ) < 379 && $( "#slider-range" ).slider( "values", 1 ) > 379)
+        x1.hidden = false;
+    }else{
+     x.hidden = true;
+     x1.hidden = true;
+    }
+  }
+  function filter_result_2(ele) {
+    var x = document.getElementById("gift-1");
+    var x1 = document.getElementById("gift-2");
+    if(ele.checked == true){
+      if($( "#slider-range" ).slider( "values", 0 ) < 300 && $( "#slider-range" ).slider( "values", 1 ) > 300)
+        x.hidden = false;
+      if($( "#slider-range" ).slider( "values", 0 ) < 999 && $( "#slider-range" ).slider( "values", 1 ) > 999)
+        x1.hidden = false;
+    }else{
+     x.hidden = true;
+     x1.hidden = true;
+    }
+  }
+  function filter_result_3(ele) {
+    var x = document.getElementById("gift-5");
+    var x1 = document.getElementById("gift-6");
+
+    if(ele.checked == true){
+      if($( "#slider-range" ).slider( "values", 0 ) < 1599 && $( "#slider-range" ).slider( "values", 1 ) > 1599)
+      x.hidden = false;
+      if($( "#slider-range" ).slider( "values", 0 ) < 4998 && $( "#slider-range" ).slider( "values", 1 ) > 4998)
+        x1.hidden = false;
+    }else{
+     x.hidden = true;
+    }
+  }
+  function yeye(){
+    document.getElementById("parfume-chkbox").checked = true;
+    document.getElementById("cloth-chkbox").checked= true;
+    document.getElementById("stel-chkbox").checked = true;
+  }
   </script>
   <link rel="stylesheet" type="text/css" href="./Content/Styles/Custom.css">
   </head>
-  <body>
+  <body onload="yeye()">
     <div class="row">
       <div class="col-4">
-            <br>
         <button class="stealth">
           <a href="index.html">
             <img src="./Content/Images/Left-Arrow.png" class="backarrow">
@@ -41,12 +132,39 @@
         </div>
     </div>
     <div class="row">
-      <div class="col-min"></div>
+      <div class="col-1">
+
+      </div>
+      <div class="col-2">
+
+      </div>
+      <div class="col-min">
+
+      </div>
+      <div class="col-3">
+      <div class="col-12 gift-sort">
+        <div class="slim-col-6">
+          <label class="custom-font" style="vertical-align:sub"> Sortere efter: </label>
+        </div>
+        <div class="slim-col-6 select_style">
+
+          <select>
+            <option value="1">Popularitet</option>
+            <option value="2">Pris - Lav til Høj</option>
+            <option value="3">Pris - Høj til Lav</option>
+            <option value="4">Vores Anbefalet</option>
+          </select>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-1"></div>
       <div class="col-2">
         <table class="filter-table" >
           <tr>
             <td>
-              <label for="amount" style="font-weight:bold;">Pris:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text" id="amount" readonly class="filter-table-text"/>
+              <label for="amount" style="font-weight:bold;font-size:1vw">Pris:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text" id="amount" readonly class="filter-table-text"/>
               </td>
           </tr>
           <tr>
@@ -57,32 +175,92 @@
           <tr>
             <td>
               <div>
-              <input type="checkbox"  /><label class="custom-font"> &nbsp;&nbsp;Tøj</label>
+              <input id="cloth-chkbox" type="checkbox" class="checkbox" checked="true" onclick="filter_result_1(this)"/><label class="custom-font"> &nbsp;&nbsp;Tøj</label>
               </div>
             </td>
           </tr>
           <tr>
             <td>
               <div>
-              <input type="checkbox"  /><label class="custom-font"> &nbsp;&nbsp;Parfume</label>
+              <input id="parfume-chkbox" type="checkbox" class="checkbox" checked="true" onclick="filter_result_2(this)" /><label class="custom-font"> &nbsp;&nbsp;Parfume</label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div>
+                <input id="stel-chkbox" type="checkbox" class="checkbox" checked="true" onclick="filter_result_3(this)" /><label class="custom-font"> &nbsp;&nbsp;Stel</label>
               </div>
             </td>
           </tr>
         </table>
       </div>
       <div class="col-min"></div>
-      <div class="col-9">
+      <div class="col-8">
         <div class="gift-result">
-
-          <div class="row bottom-line">
-
-            <div class="col-5">
-              <img src="content/Images/SBGift.png" class="gift-img">
-            </div>
+          <div id="gift-5" class="row gift-result-item">
             <div class="col-4">
+              <img src="content/Images/sofia.jpg" class="gift-result-icon">
+            </div>
+            <div class="col-5">
               <div class="row">
                 <h3>
-                  M2 BEAUTÈ Limited Edition Gaveæske
+                  Wmf Blankt Sofia Bestiksæt 24 Dele
+                </h3>
+              </div>
+              <div class="row">
+                <h3>
+                  Pris: 1599,95 DKK
+                </h3>
+              </div>
+              <div class="row" >
+                <h3>
+                  Kan købes i IMERCO
+                </h3>
+              </div>
+            </div>
+            <div class="more-info">
+              <div class="col-3">
+                <button  class="catagory-btn more-info" type="button">  <a href="gift5.html">more info</a></button>
+              </div>
+            </div>
+          </div>
+          <div id="gift-6" class="row gift-result-item">
+            <div class="col-4">
+              <img src="content/Images/Juletilbud-topbillede.png" class="gift-result-icon">
+            </div>
+            <div class="col-5">
+              <div class="row">
+                <h3>
+                  Jule Stel sæt
+                </h3>
+              </div>
+              <div class="row">
+                <h3>
+                  Pris: 4998 DKK
+                </h3>
+              </div>
+              <div class="row" >
+                <h3>
+                  Kan købes i IMERCO
+                </h3>
+              </div>
+            </div>
+            <div class="more-info">
+              <div class="col-3">
+                <button  class="catagory-btn more-info" type="button">  <a href="gift6.html">more info</a></button>
+              </div>
+            </div>
+          </div>
+          <div id="gift-1" class="row gift-result-item">
+            <div class="col-4">
+              <img src="content/Images/SBGift.png" class="gift-result-icon">
+            </div>
+            <div class="col-5">
+              <div class="row">
+                <h3>
+                  M2 BEAUTÈ Limited Edition Gave&aelig;ske
+                </h3>
                 </h3>
               </div>
               <div class="row">
@@ -90,21 +268,24 @@
                   Pris: 300 DKK
                 </h3>
               </div>
-            </div>
-            <div class="more-info">
-              <div class="col-3">
-                <br><br><br><br><br>
-                <button  class="catagory-btn more-info" type="button">  <a href="Route.html">more info</a></button>
-
+              <div class="row">
+                <h3>
+                  Kan købes i Matas
+                </h3>
               </div>
-                          </div>
-          </div>
-<div class="row">
-
-            <div class="col-5">
-              <img src="content/Images/HBgift.png" class="gift-img">
             </div>
+              <div class="col-3 more-info">
+                <button  class="catagory-btn" type="button">
+                    <a href="Route.html">more info</a>
+                  </button>
+              </div>
+          </div>
+          <div id="gift-2" class="row gift-result-item">
+
             <div class="col-4">
+              <img src="content/Images/HBgift.png" class="gift-result-icon">
+            </div>
+            <div class="col-5">
               <div class="row">
                 <h3>
                   Hugo Boss Boss The Scent For Her Eau De Parfum 30ml
@@ -115,25 +296,78 @@
                   Pris: 999,95 DKK
                 </h3>
               </div>
+              <div class="row">
+                <h3>
+                  Kan købes i Matas
+                </h3>
+              </div>
             </div>
             <div class="more-info">
               <div class="col-3">
-                <br><br><br><br><br>
                 <button  class="catagory-btn more-info" type="button">  <a href="gave2.html">more info</a></button>
-
               </div>
-                          </div>
-                        </div>
+            </div>
           </div>
+          <div id="gift-3" class="row gift-result-item">
+            <div class="col-4">
+              <img src="content/Images/kjole.jpg" class="gift-result-icon">
+            </div>
+            <div class="col-5">
+              <div class="row">
+                <h3>
+                  BLONDE KORT KJOLE
+                </h3>
+              </div>
+              <div class="row">
+                <h3>
+                  Pris: 299,95 DKK
+                </h3>
+              </div>
+              <div class="row">
+                <h3>
+                  Kan købes i Vero Moda
+                </h3>
+              </div>
+            </div>
+            <div class="more-info">
+              <div class="col-3">
+                <button  class="catagory-btn more-info" type="button">  <a href="test3.html">more info</a></button>
+              </div>
+            </div>
+          </div>
+          <div id="gift-4" class="row gift-result-item">
+            <div class="col-4">
+              <img src="content/Images/jumpsuit.jpg" class="gift-result-icon">
+            </div>
+            <div class="col-5">
+              <div class="row">
+                <h3>
+                  LANGÆRMET JUMPSUIT
+                </h3>
+              </div>
+              <div class="row">
+                <h3>
+                  Pris: 379,95 DKK
+                </h3>
+              </div>
+              <div class="row">
+                <h3>
+                  Kan købes i Vero Moda
+                </h3>
+              </div>
+            </div>
+            <div class="more-info">
+              <div class="col-3">
+                <button  class="catagory-btn more-info" type="button">  <a href="gift4.html">more info</a></button>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
     </div>
     </div>
   </body>
+
 </html>
-<script type="text/javascript">
-  function rangeEvent(val){
-          document.getElementById('priceRange').value=val;
-        }
-  }
-</script>
